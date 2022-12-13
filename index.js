@@ -1,5 +1,22 @@
 function isPalindrome(word) {
   // Write your algorithm here
+  let left = 0;
+  let right = word.length - 1;
+
+  // Continue until the pointers meet in the middle
+  while (left < right) {
+    // If the characters at the current pointers don't match, return false
+    if (word[left] !== word[right]) {
+      return false;
+    }
+
+    // Move the pointers inwards towards the middle of the string
+    left++;
+    right--;
+  }
+
+  // If we get to this point, the string must be a palindrome
+  return true;
 }
 
 /* 
